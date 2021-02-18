@@ -83,7 +83,7 @@ let fileManager = FileManager()
 let sourceDirectoryURL: URL
 
 if let input = inputPath {
-    sourceDirectoryURL = URL(fileURLWithPath: input)
+    sourceDirectoryURL = URL(fileURLWithPath: input).standardized
 } else {
     sourceDirectoryURL = URL(fileURLWithPath: fileManager.currentDirectoryPath)
 }
@@ -93,7 +93,7 @@ if let input = inputPath {
 var destinationDirectoryURL: URL
 
 if let output = outputPath {
-    destinationDirectoryURL = URL(fileURLWithPath: output).absoluteURL
+    destinationDirectoryURL = URL(fileURLWithPath: output).standardized.absoluteURL
 } else {
     destinationDirectoryURL = URL(fileURLWithPath: fileManager.currentDirectoryPath)
 }
@@ -103,7 +103,7 @@ if let output = outputPath {
 var swiftDestinationURL: URL?
 
 if let swiftDestinationPath = swiftDestinationOption.value {
-    swiftDestinationURL = URL(fileURLWithPath: swiftDestinationPath).absoluteURL
+    swiftDestinationURL = URL(fileURLWithPath: swiftDestinationPath).standardized.absoluteURL
 } else if swiftDestinationOption.wasSet {
     swiftDestinationURL = URL(fileURLWithPath: fileManager.currentDirectoryPath)
 }
