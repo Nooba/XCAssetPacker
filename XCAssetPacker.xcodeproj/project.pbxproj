@@ -194,7 +194,7 @@
 					4A56D1461DE5B573000B40D8 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = D92MT22EX5;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1220;
 						ProvisioningStyle = Automatic;
 					};
 					4AD71E7B1EA4CCBA00016A1A = {
@@ -210,6 +210,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 4A56D13E1DE5B573000B40D8;
@@ -375,7 +376,7 @@
 				DEVELOPMENT_TEAM = D92MT22EX5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -385,7 +386,7 @@
 				DEVELOPMENT_TEAM = D92MT22EX5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

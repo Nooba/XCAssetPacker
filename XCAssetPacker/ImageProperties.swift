@@ -82,7 +82,7 @@ struct ImageProperties {
     
     
     static var typesForSuffixes: [(String, ImageType)] {
-        return ImageType.all.flatMap { (type) in
+        return ImageType.all.compactMap { (type) in
             if let suffix = type.suffix {
                 return (suffix, type)
             } else {

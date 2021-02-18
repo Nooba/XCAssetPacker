@@ -206,8 +206,9 @@ extension String {
         
         self.enumerateSubstrings(in: startIndex..<endIndex, options: .byWords) { (substring, substringRange, _, stop) in
             guard var substring = substring else { return }
-            
-            if let firstCharacterOfWord = substring.characters.popFirst() {
+
+            if substring.count > 0 {
+                let firstCharacterOfWord = substring.removeFirst()
                 var firstLetterOfWord = String(firstCharacterOfWord)
                 firstLetterOfWord = isFirstLetter ? firstLetterOfWord.lowercased() : firstLetterOfWord.uppercased()
                 adaptedText += firstLetterOfWord + substring
